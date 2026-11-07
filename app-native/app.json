@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "PinSnap",
+    "slug": "pinsnap",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pinsnap.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "PinSnap braucht die Kamera, um Projektfotos aufzunehmen.",
+        "NSLocationWhenInUseUsageDescription": "PinSnap nutzt deinen Standort, um die Projektadresse automatisch auszufüllen."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0C10",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.pinsnap.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sharing",
+      "expo-image",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "PinSnap braucht die Kamera, um Projektfotos aufzunehmen.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "PinSnap nutzt deinen Standort, um die Projektadresse automatisch auszufüllen."
+        }
+      ]
+    ],
+    "scheme": "pinsnap",
+    "backgroundColor": "#0B0C10"
+  }
+}
